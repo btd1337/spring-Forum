@@ -25,6 +25,20 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.Tiles-View">
+		
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.web.servlet.view.tiles3.Tiles-Configurer">
+		<property name="definitions">
+			<list>
+				<value>/tiles/tiles-config.xml</value>
+			</list>
+		</property>
+	</bean>
 		
 </beans>
 	
